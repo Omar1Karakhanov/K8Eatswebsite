@@ -1,0 +1,11 @@
+app-header{
+    display: flex;
+    margin: auto;
+    background-color: black;
+    border-bottom: red solid 3px;
+}
+app-footer{
+    margin-top: 60px;
+}
+
+

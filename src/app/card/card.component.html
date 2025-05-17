@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="right">
+        <img [src]="foodCard?.imgSrc" alt="">
+
+    </div>
+    <div class="left">
+        <div class="price">
+            <h1>{{foodCard?.name}}</h1>
+            <h2>{{foodCard?.price}}</h2>
+        </div>
+
+        <p>Description: {{foodCard?.description}}</p>
+        <div class="btns">
+            <button class="btn-1" (click)="addToCart(foodCard)"><p>Add to cart</p></button>
+          
+        </div>
+    </div>
+</div>

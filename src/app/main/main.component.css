@@ -1,0 +1,234 @@
+section{
+    overflow-y: scroll;
+}
+/* SECTION CONTAINER */
+.sec-1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* STYLISH SEARCH INPUT */
+.sec-1 input[type="search"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 2px solid #8b0000;
+  border-radius: 8px;
+  background-color: #000;
+  color: #fff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+  transition: 0.3s ease;
+}
+
+.sec-1 input[type="search"]::placeholder {
+  color: #aaa;
+}
+
+.sec-1 input[type="search"]:focus {
+  border-color: #ff1a1a;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.7);
+}
+
+/* SPICINESS RANGE SLIDER */
+.range-thing {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 400px;
+  width: 100%;
+}
+
+.range-thing input[type="range"] {
+  width: 100%;
+  appearance: none;
+  height: 10px;
+  background: linear-gradient(to right, #8b0000, #ff0000);
+  border-radius: 10px;
+  outline: none;
+  margin-top: 8px;
+}
+
+.range-thing input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 2px solid #8b0000;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.range-thing input[type="range"]::-webkit-slider-thumb:hover {
+  background: #ff1a1a;
+}
+
+/* LABEL STYLING */
+.sec-1 label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 5px;
+  background-color: white;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .sec-1 {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .sec-1 input[type="search"],
+  .range-thing {
+    max-width: 100%;
+  }
+
+  .sec-1 label {
+    font-size: 1rem;
+  }
+}
+
+.sec-1, .sec-2 {
+  padding: 0 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+/* .sec-prod {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  padding: 20px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+} */
+
+.sec-prod {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  padding: 20px;
+  justify-content: center; 
+}
+
+input[type="search"], input[type="range"] {
+  max-width: 100%;
+}
+
+.mt-3{
+    padding-bottom: 20px;
+}
+
+.container {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+app-filters{
+    display:flex;
+    align-items: self-start;
+    justify-content: center;
+}
+app-product{
+    display: grid;
+    border: rgb(101, 101, 101) solid 3px;
+    border-radius: 15px;
+    gap: 12px;
+   
+}
+.ragne-thing{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.range{
+    -webkit-appearance: none;
+    background-color: rgb(255, 255, 255);
+    border: black 2px solid;
+     border-radius:15px; 
+     overflow:hidden; 
+     width: 200px;
+     outline:none;
+     height: 18px;
+     justify-self: center;
+
+    }
+    
+    .range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background:gray;
+    width:18px; 
+    height:18px; 
+    border-radius:50%;
+    box-shadow:-407px 0 0 400px #030303;
+    cursor:pointer;
+    }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    max-width: 640px;
+    margin: auto;
+    border-bottom: red solid 3px;
+}
+.thin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 100px;
+    transition: 0.2s;
+    border: none;
+    background-color: white;
+}
+.thin:hover{
+    background-color: red;
+}
+p{
+    color: black;   
+}
+.form-control{
+    width: 580px;
+}
+label{
+    font-size: 26px;
+}
+div{
+    display: flex;
+    justify-content: center;
+}
+
+
+@media screen and (max-width:980px){
+    .sec-prod{
+        grid-template-columns: 1fr 1fr;
+    }
+    .container{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:500px){
+    .sec-prod{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 300px;
+    }
+    .form-control{
+        width: 240px;
+    }
+}

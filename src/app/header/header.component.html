@@ -1,0 +1,25 @@
+<div class="container">
+    <a class = 'logo'href="">K8eats</a>
+    <nav class="nav"> 
+        <a href="" class="color">HOME</a>
+        
+
+        <a class="color" [routerLink]="['/shop']">SHOP</a>
+        <a href="" [routerLink]="['/cart']" class="lageba">
+            <p class="color">Cart</p>
+            <img class = 'cart' src="https://www.freeiconspng.com/thumbs/cart-icon/cart-icon-16.png" alt="">
+        </a>
+        
+    </nav>
+    <button (click)="toggle()" class='burger'> 
+        <img src="../../assets/burger.png" alt="">
+    </button>
+    <nav class="burgerMenu" [ngClass]="{'openNavigation': isMenuOpen}">
+        <a href="" class="color">Home</a>
+        <a class="color" [routerLink]="['/shop']">SHOP</a>
+        <a href="" [routerLink]="['/cart']" class="lageba">
+            <p class="color">Cart</p>
+            <img class = 'cart' src="https://www.freeiconspng.com/thumbs/cart-icon/cart-icon-16.png" alt="">
+        </a>
+    </nav>
+</div>

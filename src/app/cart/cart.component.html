@@ -1,0 +1,28 @@
+
+<div class="container"style="padding: 20px;">
+
+<h1>Cart</h1>
+
+
+  <div class="cart-item" *ngFor="let item of cartService.getItems()">
+    
+      <img [src]="item.imgSrc" alt="" class="image"> 
+      <h3>{{ item.name }}</h3>
+      <p>Price: {{ item.price }}</p>
+      <p>Quantity: {{item.quantity}}</p>
+      <div class='liging'>
+        <button (click)="deleteFromCart(item)">Delete</button>
+        <button (click)="cartService.incrementQuantity(item.id)">+</button>
+        <button (click)="cartService.decrementQuantity(item.id)">-</button>
+      </div>
+    
+  
+  </div>
+
+</div>
+
+
+<div style="padding: 28px;">
+  <h1>Total: {{ cartService.getTotal() }}$</h1>
+  <button (click)="order()" class="k8restOrder">order</button>
+</div>

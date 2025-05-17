@@ -1,0 +1,35 @@
+<section>
+    <div class="sec-1">
+        <div class="mt-3" >
+            <label for="search">Search:</label>
+            <input clter type="search" #filter
+            class="form-control"
+            pattern=".*\S."
+            (keyup)="filterResults(filter.value)"
+            name="search" style="resize: horizontal;" required>
+            
+        </div>
+        <div class="range-thing">
+        <label for="range">Spiciness:</label>
+        <input type="range" #rangeV (change)="rangeSpiciness(rangeV.value)" step="1" min="0" max="10" class="range" value="0" >
+        </div>
+        <div class="container">
+            <button class='thin' (click)="onCategoryChange('all')"><p>All</p></button>
+            <button class='thin' (click)="onCategoryChange('pasta')"><p>Pasta</p></button>
+            <button class='thin' (click)="onCategoryChange('entree')" ><p>Entree</p></button>
+            <button class='thin' (click)="onCategoryChange('salad')" ><p>Salad</p></button>
+            <button class='thin' (click)="onCategoryChange('burger')" ><p>Burger</p></button>
+            <button class='thin' (click)="onCategoryChange('pizza')" ><p>Pizza</p></button>
+            <button class='thin' (click)="onCategoryChange('seafood')" ><p>Seafood</p></button>
+            <button class='thin' (click)="onCategoryChange('dessert')" ><p>Dessert</p></button>
+        </div>
+    </div>
+    <div class="sec-2">
+        <div class="sec-prod" >
+            <app-product  *ngFor="let food of filteredfoodList" [food]="food" ></app-product>  
+        </div>
+    </div>
+</section>
+
+
+

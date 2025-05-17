@@ -1,0 +1,13 @@
+
+
+<img src="{{food.imgSrc}}" alt="" class = 'card-img'>
+<h1 class="card-name">{{food.name}}</h1>
+<p class="card-desc">{{food.description}}</p>
+<div>
+    <p class="card-price">$ {{food.price}}</p>
+    <img *ngIf="food.isVegan" class="isvegan" src="https://th.bing.com/th/id/OIP.P_9jHIPbd2zuMp0MEfFeagHaHa?rs=1&pid=ImgDetMain" alt="">
+</div>
+<div>
+    <button class="box" (click)="addToCart(food)">Add To Cart!</button>
+    <button class="box" [routerLink]="['/card', food.id]">Shop Now!</button>
+</div>
