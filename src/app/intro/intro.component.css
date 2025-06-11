@@ -12,10 +12,9 @@
     gap: 42px;
 }
 
-/* Background Section */
 .intro-section {
   position: relative;
-  background-image: url('https://wallpaperaccess.com/full/3692584.jpg'); /* Replace with your food image */
+  background-image: url('https://wallpaperaccess.com/full/3692584.jpg'); 
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -24,7 +23,6 @@
   justify-content: center;
 }
 
-/* Dark overlay */
 .overlay {
   background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
@@ -34,7 +32,6 @@
   justify-content: center;
 }
 
-/* Main content */
 .intro-content {
   text-align: center;
   color: #fff;
@@ -59,8 +56,6 @@
   color: #ddd;
   margin-bottom: 30px;
 }
-
-/* Button styling */
 .intro-btn {
   background: #8b0000;
   color: white;
@@ -80,7 +75,6 @@
   box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
 }
 
-/* Fade-in animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -92,7 +86,6 @@
   }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .intro-content h1 {
     font-size: 2.2rem;
@@ -170,30 +163,3 @@ p{
     }
 
 
-/* 
-.section {
-  background-image: url("https://wallpaperaccess.com/full/3692584.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: auto;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.container {
-  background: rgba(255, 255, 255, 0.8);
-  padding: 2rem;
-  border-radius: 2rem;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-  max-width: 90%;
-  margin: auto;
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
-p {
-  font-size: 1rem;
-  color: rgb(131, 45, 45);
-} */
